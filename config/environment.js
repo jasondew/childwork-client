@@ -16,6 +16,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com maxcdn.bootstrapcdn.com",
+      'connect-src': "'self' chore-chart-api.dev chore-chart-api.herokuapp.com",
+      'font-src': "'self' data: maxcdn.bootstrapcdn.com fonts.gstatic.com",
+      'img-src': "'self'",
     }
   };
 
