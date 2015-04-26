@@ -1,5 +1,31 @@
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <div class='navbar-brand'><a href="/">Austin&#39;s Chores</a></div>
+    </div>
+    <ul class='nav navbar-nav navbar-right'>
+      <li>
+        <a {{action "previousWeek"}}>
+          <i class="fa fa-backward"></i>
+          Previous week
+        </a>
+      </li>
+      <li>
+        <a {{action "nextWeek"}}>
+          Next Week
+          <i class="fa fa-forward"></i>
+        </a>
+      </li>
+      <p class='navbar-text'>
+        <a href="/?class=navbar-link">Login</a>
+      </p>
+    </ul>
+  </div>
+</nav>
+
 <div class="container">
-  <h1>Chores for the week of April 25th, 2015</h1>
+  <h1>Chores for the week of {{formattedToday}}</h1>
+
   <table class="table table-striped table-responsive">
     <thead>
       <tr>
@@ -14,155 +40,22 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th>
-          Feeding
-          <small>($2)</small>
-        </th>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-04-25"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-04-26"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-04-27"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-04-28"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-04-29"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-04-30"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/1/complete?day=2015-05-01"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-      </tr>
-      <tr>
-        <th>
-          Dishes
-          <small>($2)</small>
-        </th>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-04-25"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-04-26"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-04-27"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-04-28"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-04-29"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-04-30"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/2/complete?day=2015-05-01"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-      </tr>
-      <tr>
-        <th>
-          Dusting
-          <small>($2)</small>
-        </th>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-04-25"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-04-26"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-04-27"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-04-28"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-04-29"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-04-30"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/3/complete?day=2015-05-01"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-      </tr>
-      <tr>
-        <th>
-          Trash
-          <small>($1)</small>
-        </th>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/uncomplete?day=2015-04-25"><input type="hidden" name="_method" value="delete"><button type="submit"><i class="fa fa-check"></i>
-          </button><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/complete?day=2015-04-26"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/complete?day=2015-04-27"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/complete?day=2015-04-28"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/complete?day=2015-04-29"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/complete?day=2015-04-30"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/4/complete?day=2015-05-01"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-      </tr>
-      <tr>
-        <th>
-          Vacuuming
-          <small>($2)</small>
-        </th>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-04-25"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-04-26"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-04-27"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-04-28"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-04-29"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-04-30"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-        <td class="chore">
-          <form class="button_to" method="post" action="/chores/5/complete?day=2015-05-01"><input type="submit" value="&nbsp;"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g=="></form>
-        </td>
-      </tr>
+      {{#each model.chores as |chore|}}
+        {{chore-week chore=chore weekStarting=today}}
+      {{/each}}
     </tbody>
   </table>
+
   <div class="pull-left">
     <h2>Total Income: $1.00</h2>
   </div>
+
   <div class="pull-right">
-    <p>
-      </p><form action="/payments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="XzGQYtRTmLkLGTNXXYnC8IghutS4urBdFVZh0kMfSIAHHbzY38YOF1V2TT39QCABGqIR4ReDNpihWEBBxji73g==">
-          <input type="hidden" name="week" id="week" value="18">
-          <input type="hidden" name="year" id="year" value="2015">
-          <input type="hidden" name="amount" id="amount" value="1">
-          <input type="submit" name="commit" value="Pay Me!" class="btn btn-success">
-      </form>
-    <p></p>
+    <form action="/payments" accept-charset="UTF-8" method="post">
+      <input type="hidden" name="week" id="week" value="18">
+      <input type="hidden" name="year" id="year" value="2015">
+      <input type="hidden" name="amount" id="amount" value="1">
+      <input type="submit" name="commit" value="Pay Me!" class="btn btn-success">
+    </form>
   </div>
 </div>
