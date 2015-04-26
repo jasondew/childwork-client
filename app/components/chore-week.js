@@ -1,3 +1,4 @@
+/* global moment:true */
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -22,14 +23,15 @@ export default Ember.Component.extend({
     var chore = this.get("chore"),
         today = this.get("today"),
         store = this.get("chore").store,
-        completedDates = new Ember.Set(chore.get("completedChores").map(function(completedChore) {
-          return completedChore.get("completed_on");
-        }));
+        completedDates = chore.get("completedChores").map(function(completedChore) {
+          return completedChore.get("completed_on").format("YYYY-MM-DD");
+        });
 
     console.log(completedDates);
     return [0, 1, 2, 3, 4, 5, 6].map(function(offset) {
       var date = moment(today).add(offset, "days"),
-          complete = completedDates.contains(date);
+          formattedDate = date.format("YYYY-MM-DD"),
+          complete = completedDates.indexOf(formattedDate) !== -1;
 
       return store.createRecord("chore-day", {
         chore: chore,
