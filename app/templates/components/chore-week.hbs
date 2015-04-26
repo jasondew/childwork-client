@@ -8,11 +8,11 @@
 {{#each choreDays as |choreDay|}}
   <td class="chore">
     {{#if choreDay.complete}}
-      <button {{action "uncomplete" "2015-04-25"}}>
+      <button {{action "uncomplete" choreDay}}>
         <i class="fa fa-check"></i>
       </button>
     {{else}}
-      <button {{action "complete" "2015-04-26"}}/>
+      <button {{action "complete" choreDay}}/>
     {{/if}}
   </td>
 {{/each}}
