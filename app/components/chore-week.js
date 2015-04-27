@@ -14,22 +14,27 @@ export default Ember.Component.extend({
       completedChore.save();
     },
     uncomplete: function(choreDay) {
-      var store = choreDay.get("store");
+      var chore = choreDay.get("chore"),
+          store = choreDay.get("store");
 
-      store.find("completed-chore", {chore: choreDay.get("chore"), completed_on: choreDay.get("date")})
-           .then(function(completedChore) {
-             completedChore.destroyRecord();
-           });
+      store.find("completed-chore", {
+        chore_id: chore.get("id"),
+        completed_on: choreDay.get("date").format("YYYY-MM-DD")
+      }).then(function(completedChore) {
+        completedChore.destroy();
+        completedChore.save();
+        chore.get("completedChores").removeObject(completedChore);
+      });
     }
   },
 
   week: function() {
-    var beginningOfWeek = moment(this.get("today")).startOf("week").subtract(1, "day");
+    var beginningOfWeek = moment(this.get("weekStarting")).startOf("week").subtract(1, "day");
 
     return [0, 1, 2, 3, 4, 5, 6].map(function(offset) {
       return moment(beginningOfWeek).add(offset, "days");
     });
-  }.property("today"),
+  }.property("weekStarting"),
 
   choreDays: function() {
     var chore = this.get("chore"),
@@ -50,5 +55,5 @@ export default Ember.Component.extend({
         complete: complete
       });
     });
-  }.property("today", "chore.completedChores.@each.completed_on"),
+  }.property("weekStarting", "chore.completedChores.@each.completed_on"),
 });
