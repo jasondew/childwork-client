@@ -20,10 +20,10 @@ export default Ember.Component.extend({
       store.find("completed-chore", {
         chore_id: chore.get("id"),
         completed_on: choreDay.get("date").format("YYYY-MM-DD")
-      }).then(function(completedChore) {
-        completedChore.destroy();
-        completedChore.save();
-        chore.get("completedChores").removeObject(completedChore);
+      }).then(function(completedChores) {
+        completedChores.forEach(function(completedChore) {
+          completedChore.destroyRecord();
+        });
       });
     }
   },
