@@ -1,0 +1,47 @@
+<button type="button" class="btn btn-primary btn-small" data-toggle="modal" data-target="#newChore">
+  Add chore
+</button>
+
+<div class="modal" id="newChore" tabindex="-1" role="dialog" aria-labelledby="newChoreLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="newChoreLabel">Add a chore</h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-6 col-md-offset-3">
+          <form class="form-horizontal">
+            <div class="form-group">
+              {{input type="text" value=name class="form-control" id="name" placeholder="Name"}}
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                {{input type="text" value=rate class="form-control" aria-label="Rate" placeholder="Rate"}}
+              </div>
+            </div>
+            <div class="form-group">
+              {{textarea value=notes class="form-control" id="notes" placeholder="Notes"}}
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-3 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    {{input type="checkbox" checked=repeating id="repeating"}} Repeating?
+                  </label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" {{action "cancel" on="click"}} class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" {{action "save" on "click"}} class="btn btn-primary" data-dismiss="modal">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

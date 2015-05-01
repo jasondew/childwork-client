@@ -5,4 +5,5 @@ export default DS.Model.extend({
   name: DS.attr("string"),
   rate: DS.attr("number"),
   notes: DS.attr("string"),
+  repeating: DS.attr("boolean"),
 });

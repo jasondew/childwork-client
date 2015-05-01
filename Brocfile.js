@@ -18,6 +18,7 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('bower_components/momentjs/moment.js');
+app.import('bower_components/bootstrap/js/modal.js');
 app.import("app/styles/source_sans_pro.css");
 app.import("bower_components/font-awesome/css/font-awesome.css");
 app.import("bower_components/font-awesome/fonts/fontawesome-webfont.eot", { destDir: "fonts" });
