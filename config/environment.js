@@ -21,7 +21,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com maxcdn.bootstrapcdn.com",
-      'connect-src': "'self' childwork-api.dev api.childwork.rocks chore-chart-api.herokuapp.com",
+      'connect-src': "'self' childwork-api.dev childwork-api.herokuapp.com",
       'font-src': "'self' data: maxcdn.bootstrapcdn.com fonts.gstatic.com",
       'img-src': "'self'",
     }
@@ -49,7 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.API = "https://api.childwork.rocks";
+    ENV.APP.API = "https://childwork-api.herokuapp.com";
   }
 
   return ENV;
