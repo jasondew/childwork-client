@@ -21,13 +21,14 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'style-src': "'self' 'unsafe-inline' maxcdn.bootstrapcdn.com",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' code.jquery.com maxcdn.bootstrapcdn.com",
-      'connect-src': "'self' chore-chart-api.dev chore-chart-api.herokuapp.com",
+      'connect-src': "'self' childwork-api.dev api.childwork.rocks chore-chart-api.herokuapp.com",
       'font-src': "'self' data: maxcdn.bootstrapcdn.com fonts.gstatic.com",
       'img-src': "'self'",
     }
   };
 
   if (environment === 'development') {
+    ENV.APP.API = "http://childwork-api.dev";
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -48,7 +49,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.API = "https://api.childwork.rocks";
   }
 
   return ENV;
