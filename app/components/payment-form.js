@@ -29,5 +29,5 @@ export default Ember.Component.extend({
     return payments.any(function(payment) {
       return (payment.get("week") === week) && (payment.get("year") === year);
     });
-  }.property("today", "payments"),
+  }.property("today", "payments.@each"),
 });
