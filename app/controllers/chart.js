@@ -6,6 +6,9 @@ export default Ember.Controller.extend({
   todayString: null,
 
   actions: {
+    currentWeek: function() {
+      this.changeToday(moment());
+    },
     previousWeek: function() {
       this.changeToday(moment(this.get("today")).subtract(1, "weeks"));
     },
@@ -48,5 +51,5 @@ export default Ember.Controller.extend({
 
       return sum + rate * countThisWeek;
     }.bind(this), 0);
-  }.property("model.chores.@each.completedChores"),
+  }.property("today", "model.chores.@each.completedChores"),
 });

@@ -1,0 +1,10 @@
+{{#if paid}}
+  <h3>Paid!</h3>
+{{else}}
+  <form>
+    <input type="hidden" name="week" id="week" value={{week}}>
+    <input type="hidden" name="year" id="year" value={{year}}>
+    <input type="hidden" name="amount" id="amount" value={{amount}}>
+    <input type="submit" {{action "pay"}} name="commit" value="Pay Me!" class="btn btn-success">
+  </form>
+{{/if}}

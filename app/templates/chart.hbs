@@ -11,6 +11,9 @@
         </a>
       </li>
       <li>
+        <a {{action "currentWeek"}}>Today</a>
+      </li>
+      <li>
         <a {{action "nextWeek"}}>
           Next Week
           <i class="fa fa-forward"></i>
@@ -57,11 +60,6 @@
   </div>
 
   <div class="pull-right">
-    <form>
-      <input type="hidden" name="week" id="week" {{bind-attr value=thisWeek}}>
-      <input type="hidden" name="year" id="year" {{bind-attr value=thisYear}}>
-      <input type="hidden" name="amount" id="amount" {{bind-attr value=totalIncome}}>
-      <input type="submit" {{action "pay"}} name="commit" value="Pay Me!" class="btn btn-success">
-    </form>
+    {{payment-form store=controller.store payments=model.payments today=today amount=totalIncome}}
   </div>
 </div>
