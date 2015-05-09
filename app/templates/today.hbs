@@ -18,27 +18,20 @@
   </div>
 
   <div class="row">
-    {{#each model.chores as |chore|}}
+    {{#each choreDays as |choreDay|}}
       <div class="col-md-4">
         <div class="panel panel-default chore">
           <div class="panel-heading clearfix">
             <h3 class="pull-left">
-              {{chore.name}}
-              <small>(${{chore.rate}})</small>
+              {{choreDay.chore.name}}
+              <small>(${{choreDay.chore.rate}})</small>
             </h3>
             <div class="pull-right">
-              {{#if chore.complete}}
-                <button {{action "uncomplete" chore}}>
-                  <i class="fa fa-check"></i>
-                </button>
-              {{else}}
-                <button {{action "complete" chore}}/>
-              {{/if}}
+              {{chore-checkbox choreDay=choreDay}}
             </div>
           </div>
           <div class="panel-body">
-            {{chore.notes}}
-
+            {{choreDay.chore.notes}}
           </div>
         </div>
       </div>

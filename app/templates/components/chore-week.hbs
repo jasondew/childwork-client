@@ -7,12 +7,6 @@
 
 {{#each choreDays as |choreDay|}}
   <td class="chore">
-    {{#if choreDay.complete}}
-      <button {{action "uncomplete" choreDay}}>
-        <i class="fa fa-check"></i>
-      </button>
-    {{else}}
-      <button {{action "complete" choreDay}}/>
-    {{/if}}
+    {{chore-checkbox choreDay=choreDay}}
   </td>
 {{/each}}
