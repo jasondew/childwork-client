@@ -9,4 +9,5 @@ export default Router.map(function() {
   this.route('chart', {
     path: '/'
   });
+  this.route('today');
 });

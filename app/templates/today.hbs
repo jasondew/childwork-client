@@ -1,0 +1,47 @@
+<nav class='navbar navbar-default'>
+  <div class='container-fluid'>
+    <div class='navbar-header'>
+      <div class='navbar-brand'><a href="/">Austin&#39;s Chores</a></div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="pull-left">
+      <h1>Today's Chores</h1>
+    </div>
+
+    <div class="pull-right">
+      <h1>This Week's Income: ${{totalIncome}}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    {{#each model.chores as |chore|}}
+      <div class="col-md-4">
+        <div class="panel panel-default chore">
+          <div class="panel-heading clearfix">
+            <h3 class="pull-left">
+              {{chore.name}}
+              <small>(${{chore.rate}})</small>
+            </h3>
+            <div class="pull-right">
+              {{#if chore.complete}}
+                <button {{action "uncomplete" chore}}>
+                  <i class="fa fa-check"></i>
+                </button>
+              {{else}}
+                <button {{action "complete" chore}}/>
+              {{/if}}
+            </div>
+          </div>
+          <div class="panel-body">
+            {{chore.notes}}
+
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
