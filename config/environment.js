@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'chore-chart-client',
+    modulePrefix: 'childwork-client',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

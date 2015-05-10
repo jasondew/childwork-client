@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 
   today: function() { return moment(); },
 
-  //TODO: function duplicated in chart controller
+  //TODO: function duplicated in week controller
   thisWeek: function(date) {
     if (date === undefined) { return false; }
 
@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
     return date.isBetween(endOfLastWeek, endOfThisWeek, "day");
   },
 
-  //TODO: function duplicated in chart controller
+  //TODO: function duplicated in week controller
   totalIncome: function() {
     return this.model.chores.reduce(function(sum, chore) {
       var completedChores = chore.get("completedChores"),

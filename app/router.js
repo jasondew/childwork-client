@@ -6,8 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.route('chart', {
-    path: '/'
-  });
-  this.route('today');
+  this.route("week");
+  this.route("today", {path: "/"});
 });
