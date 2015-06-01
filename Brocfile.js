@@ -19,6 +19,7 @@ var app = new EmberApp();
 
 app.import('bower_components/momentjs/moment.js');
 app.import('bower_components/bootstrap/js/modal.js');
+app.import('bower_components/jquery-mockjax/jquery.mockjax.js');
 app.import("app/styles/source_sans_pro.css");
 app.import("bower_components/font-awesome/css/font-awesome.css");
 app.import("bower_components/font-awesome/fonts/fontawesome-webfont.eot", { destDir: "fonts" });

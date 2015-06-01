@@ -15,5 +15,8 @@
     "bootstrap": "~3.3.2",
     "font-awesome": "~4.3.0",
     "momentjs": "~2.10.2"
+  },
+  "devDependencies": {
+    "jquery-mockjax": "~1.6.2"
   }
 }
